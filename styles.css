@@ -1,0 +1,22 @@
+@font-face {
+    font-family: LexandBlack;
+    src: url(/Fonts//Lexend/static/Lexend-Black.ttf);
+}
+*{
+    background-image: url("/images/mainbackground.png");
+}
+
+.MainPage{
+    font-size: 1.5rem;
+    font-family: LexandBlack;
+    display: grid;
+    grid-template-columns: 1.5fr .8fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 50px;
+}
