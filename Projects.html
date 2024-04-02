@@ -8,14 +8,32 @@
     <title>Northen Software Development Club</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<script>
+    function getScreenWidth(){
+        width = (Request.Browser.ScreenPixelsWidth)*2-100;
+        document.documentElement.style.setProperty(`--screnWidth`, width + 'px');
+    }
+</script>
+
+<script id="veryPosition">
+    function getPositionXY(element) {
+       var rect = element.getBoundingClientRect();
+       //document.getElementById('text').innerHTML = 'X Coordinate= ' + rect.x + '<br>' + 'Y'
+       document.documentElement.style.setProperty(`--cord`, rect.x + 'px');
+       document.documentElement.style.setProperty(`--navElementWidth`, element.clientWidth + 1 + 'px');
+       const text = element.value;
+
+       //Coordinate = ' + rect.y';
+    }
+ </script>
+<body onload="getScreenWidth">
     <div class="NavBar">
          <ul>
-             <li id="Logo"><a href="index.html">Northern Software Development Club</a></li>
-             <li><a href="Projects.html">Projects</a></li>
-             <li><a href="members.html">Members</a></li>
-             
-             <div class="underbar"></div>
+            <li id="Logo" onmouseover="getPositionXY(this)"><a href="index.html">Northern Software Development Club</a></li>
+            <li onmouseover="getPositionXY(this)"><a href="Projects.html">Projects</a></li>
+            <li onmouseover="getPositionXY(this)"><a href="members.html">Members</a></li>
+            <div class="underbar"></div>
          </ul>
      </div>
      <h1><center>This page is curently under construction</center></h1>

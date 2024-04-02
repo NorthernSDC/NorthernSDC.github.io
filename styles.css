@@ -2,6 +2,12 @@
     font-family: LexandBlack;
     src: url(/Fonts//Lexend/static/Lexend-Black.ttf);
 }
+:root{
+ /*We love our variables!*/
+ --cord: 0px;
+ --navElementWidth: 0px;
+ --screnWidth: 1920px
+}
 *{
     
     font-family: LexandBlack;
@@ -95,7 +101,6 @@ body{
 li{
     
     -webkit-transition: 0.15s ease;
-
 &:hover{
     text-shadow: 0px -2px 0px
 rgba(0,0,0,1), 0 0 5px
@@ -103,20 +108,20 @@ rgba(255,255,255,0.8),0 -4px 15px
 rgba(255,255,255,0.5);
 }
 &:nth-of-type(1):hover ~ .underbar{
-    left: 65px;
-    width: 475px;
+    left: var(--cord);
+    width: var(--navElementWidth);
     height: 5px;
     background: rgba(100,100,200,1);
 }
 &:nth-of-type(2):hover ~ .underbar{
-    left: 1226px;
-    width: 95px;
+    left: var(--cord);
+    width: var(--navElementWidth);
     height: 5px;
     background: rgba(200,100,100,1);
 }
 &:nth-of-type(3):hover ~ .underbar{
-    left: 1365px;
-    width: 90px;
+    left: var(--cord);
+    width: var(--navElementWidth);
     height: 5px;
     background: rgba(100,100,200,1);
     box-shadow: 0 0 10px rgba(70,250,250,1);
@@ -124,7 +129,7 @@ rgba(255,255,255,0.5);
 & ~ .underbar{
     -webkit-transition: 0.5s ease;
     left: 0;
-    width: 1920px;
+    width: var(--screnWidth);
     height: 5px;
     background: rgba(100,100,200,1);
 }
