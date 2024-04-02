@@ -6,6 +6,9 @@
     font-family: LexandBlack;
     color: black;
 }
+body{
+    background-image: url("/images/mainbackground.png");
+}
 .NavBar ul{
     display: flex;
     flex-direction: row;
@@ -40,7 +43,7 @@
     width: 100%;
     max-width: 1500px;
     padding: 0 50px;
-    background-image: url("/images/mainbackground.png");
+
 }
 .Members{
     font-size: 1.5rem;
