@@ -16,6 +16,8 @@
 body{
     overflow-x: hidden;
     background-image: url("/images/mainbackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .NavBar ul{
     display: flex;
