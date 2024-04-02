@@ -4,21 +4,45 @@
 }
 :root{
  /*We love our variables!*/
+ --circle-size: 40px;
+ --circle-transform: 0 0 0;
  --cord: 0px;
  --navElementWidth: 0px;
  --screnWidth: 1920px
 }
+
 *{
-    
+
+    cursor:none;    
     font-family: LexandBlack;
     color: black;
 }
+
 body{
     overflow-x: hidden;
     background-image: url("/images/mainbackground.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.circle {
+    
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 5px solid black;
+    
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+    transform: var(--circle-transform);
+}
+@keyframes rectAnime {
+    from{border-radius: 0%;}
+    to{border-radius: 100%;}
+}
+/*This animation will be called in javascript*/
+
 .NavBar ul{
     display: flex;
     flex-direction: row;
