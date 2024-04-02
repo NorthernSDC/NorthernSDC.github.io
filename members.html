@@ -9,28 +9,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<script>
-    function onresize(e) {
-   //note i need to pass the event as an argument to the function
-   width = window.innerWidth;
-   document.documentElement.style.setProperty(`--screnWidth`, width + 'px');
-   console.log("Resized: " + width)
-}
-window.addEventListener("resize", onresize);
-window.addEventListener("load", onresize)
-</script>
+<script src="app.js"></script>
 
-<script id="veryPosition">
-    function getPositionXY(element) {
-       var rect = element.getBoundingClientRect();
-       //document.getElementById('text').innerHTML = 'X Coordinate= ' + rect.x + '<br>' + 'Y'
-       document.documentElement.style.setProperty(`--cord`, rect.x + 'px');
-       document.documentElement.style.setProperty(`--navElementWidth`, element.clientWidth + 1 + 'px');
-       const text = element.value;
-
-       //Coordinate = ' + rect.y';
-    }
- </script>
 <body>
     <div class="NavBar">
          <ul>
