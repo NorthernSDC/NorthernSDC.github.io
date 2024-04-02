@@ -4,8 +4,30 @@
 }
 *{
     font-family: LexandBlack;
+    color: black;
 }
-
+.NavBar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    font-family: LexandBlack;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 70px;
+    font-size: 1.2rem;
+}
+.NavBar a{
+    margin: 1.5rem;
+    text-decoration: none;
+}
+#Logo{
+    display: flex;
+    margin-right: auto;
+    font-size: 1.5rem;
+    align-items: center;
+}
 .MainPage{
     font-size: 1.5rem;
     display: grid;
