@@ -1,8 +1,12 @@
 const htmlCircleElement = document.getElementById('circlee');
 const mouse = {x: 0, y: 0};
 const previousMouse = {x: 0, y: 0};
+var previousScroll = 0;
 const circle = {x: 0, y: 0};
 const speed = 0.17;
+
+
+var atTop = true;
 
 var circleVisible = false;
 var circleIsAnimating = false;
@@ -151,14 +155,39 @@ document.onkeydown = function(evt) {
         }
         circleVisible = !circleVisible
     }
-    
+    else if(evt.keyCode == 65){
+        window.open('mailto:diegoxaybar@gmail.com?subject=subject&body=body');
+    }
+
+
 };
 
 htmlCircleElement.style.visibility = "hidden";
 
 
 tick();
+
+function resizer(e){
+    console.log(document.documentElement.scrollTop)
+    if(document.documentElement.scrollTop <= previousScroll){
+        document.documentElement.style.setProperty(`--nav-height`, 80 + 'px');
+        document.documentElement.style.setProperty(`--underbar-top`, 78 + 'px');
+        atTop = true;
+
+    }
+    else{
+
+        document.documentElement.style.setProperty(`--nav-height`, 45 + 'px');
+        document.documentElement.style.setProperty(`--underbar-top`, 43 + 'px');
+        atTop = false;
+    }
+    previousScroll = document.documentElement.scrollTop;
+}
+
+
+window.addEventListener("scroll", resizer)
 window.addEventListener("mousemove", animater)
 window.addEventListener("resize", onresize);
 window.addEventListener("load", onresize);
 window.addEventListener("load", getMembers);
+//GrayIndexFinger

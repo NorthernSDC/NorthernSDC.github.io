@@ -8,7 +8,9 @@
  --circle-transform: 0 0 0;
  --cord: 0px;
  --navElementWidth: 0px;
- --screnWidth: 1920px
+ --screnWidth: 1920px;
+ --nav-height: 80px;
+ --underbar-top: 78px;
 }
 
 *{
@@ -32,6 +34,7 @@ body{
     width: var(--circle-size);
     border: 5px solid black;
     border-radius: 100%;
+    z-index: 100;
     top: calc(var(--circle-size) / 2 * -1);
     left: calc(var(--circle-size) / 2 * -1);
     pointer-events: none;
@@ -44,8 +47,24 @@ body{
     to{border-radius: 0%;}
 }
 
+@keyframes shrinkNav{
+    to{}
+}
 
+.NavBar{
+    top:0;
+    left: 0;
+    position:fixed;
+    height:var(--nav-height);
+    width: var(--screnWidth);
+    background: white;
+
+    -webkit-transition: 0.5s ease;
+
+
+}
 .NavBar ul{
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,13 +73,17 @@ body{
     font-family: LexandBlack;
     margin: 0 auto;
     padding: 0 2rem;
-    height: 70px;
+    -webkit-transition: 0.5s ease;
+    height: var(--nav-height);
     font-size: 1.2rem;
     /*background-image: url("/images/waves.png"); */
     background-size: 100% 100%;
     
     
 }
+
+
+
 .NavBar a{
     margin: 1.5rem;
     text-decoration: none;
@@ -126,7 +149,7 @@ body{
     height: 5px;
     background: rgba(100,100,100,0);
     /*Left: -50px;*/
-    top: 78px; /*I put a eight instead of just 80 since it would leave two pixels of difference from the tha navbar and that annoys me -Muffin*/
+    top: var(--underbar-top); /*I put a eight instead of just 80 since it would leave two pixels of difference from the tha navbar and that annoys me -Muffin*/
     position: absolute;
     
 }
