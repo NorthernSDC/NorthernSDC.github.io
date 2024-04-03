@@ -86,7 +86,7 @@ function animater(e){
 
 
 const tick = () => {
-
+    
     circle.x += (mouse.x - circle.x) * speed;
     circle.y += (mouse.y - circle.y) * speed;
 
@@ -134,7 +134,7 @@ function noCircle(e){
 
 htmlCircleElement.style.borderRadius = '100%' //Put this somewhere else later
   //this is the important bit
-tick();
+
 
 document.onkeydown = function(evt) {
     evt = evt || window.event;
@@ -153,7 +153,11 @@ document.onkeydown = function(evt) {
     }
     
 };
+
 htmlCircleElement.style.visibility = "hidden";
+
+
+tick();
 window.addEventListener("mousemove", animater)
 window.addEventListener("resize", onresize);
 window.addEventListener("load", onresize);
