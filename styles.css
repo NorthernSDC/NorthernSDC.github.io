@@ -54,6 +54,10 @@ body{
     padding: 0 2rem;
     height: 70px;
     font-size: 1.2rem;
+    background-image: url("/images/waves.png"); 
+    background-size: 100% 100%;
+    
+    
 }
 .NavBar a{
     margin: 1.5rem;
