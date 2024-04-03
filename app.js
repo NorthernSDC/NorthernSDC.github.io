@@ -1,7 +1,6 @@
-const circleElement = document.querySelector('.circle');
-const htmlCircleElement = document.getElementById('circlee') 
+const htmlCircleElement = document.getElementById('circlee');
 const mouse = {x: 0, y: 0};
-const previousMouse = {x: 0, y: 0}
+const previousMouse = {x: 0, y: 0};
 const circle = {x: 0, y: 0};
 const speed = 0.17;
 
@@ -26,7 +25,7 @@ function onresize() {
     //Coordinate = ' + rect.y';
  }
 
- /*
+
 function getMembers(){
 var elements = document.getElementsByClassName("Members")
 for(let element of elements)
@@ -34,11 +33,11 @@ for(let element of elements)
 
 
 }
-*/
+
 document.addEventListener("mousemove", mouseMove);
 
 function mouseMove(e){
-    if(!circleIsAnimating){
+    if(circleIsAnimating == false){
         mouse.x = e.x
         mouse.y = e.y
     }
@@ -114,10 +113,10 @@ const tick = () => {
     if(!circleIsAnimating){
         const rotateTransform = `rotate(${currentAngle}deg)`;
         //document.documentElement.style.setProperty(`--circle-transform`, [translateTransform, rotateTransform, scaleTransform]);
-        circleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
+        htmlCircleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
     }
     else{
-        circleElement.style.transform = `${translateTransform}`;
+        htmlCircleElement.style.transform = `${translateTransform}`;
     }
     
     
@@ -133,12 +132,11 @@ function noCircle(e){
     console.log(e.key)
 }
 
-circleElement.style.borderRadius = '100%' //Put this somewhere else later
+htmlCircleElement.style.borderRadius = '100%' //Put this somewhere else later
   //this is the important bit
 tick();
 
 document.onkeydown = function(evt) {
-    
     evt = evt || window.event;
     if (evt.keyCode == 67) {
         if(circleVisible){
@@ -159,4 +157,4 @@ htmlCircleElement.style.visibility = "hidden";
 window.addEventListener("mousemove", animater)
 window.addEventListener("resize", onresize);
 window.addEventListener("load", onresize);
-//window.addEventListener("load", getMembers);
+window.addEventListener("load", getMembers);

@@ -25,13 +25,13 @@ body{
     background-size: cover;
 }
 
-.circle {
-    
+.circle {       
+    visibility: visible;
     position: fixed;
     height: var(--circle-size);
     width: var(--circle-size);
     border: 5px solid black;
-    
+    border-radius: 100%;
     top: calc(var(--circle-size) / 2 * -1);
     left: calc(var(--circle-size) / 2 * -1);
     pointer-events: none;
@@ -43,7 +43,7 @@ body{
 @keyframes rectAnimeSqr {
     to{border-radius: 0%;}
 }
-/*This animation will be called in javascript*/
+
 
 .NavBar ul{
     display: flex;
@@ -56,7 +56,7 @@ body{
     padding: 0 2rem;
     height: 70px;
     font-size: 1.2rem;
-    background-image: url("/images/waves.png"); 
+    /*background-image: url("/images/waves.png"); */
     background-size: 100% 100%;
     
     
