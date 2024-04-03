@@ -22,7 +22,7 @@ function onresize() {
     //Coordinate = ' + rect.y';
  }
 
- /*
+/*    NON Functional
 function getMembers(){
 var elements = document.getElementsByClassName("Members")
 for(let element of elements)
@@ -31,6 +31,7 @@ for(let element of elements)
 
 }
 */
+/*
 document.addEventListener("mousemove", mouseMove);
 
 function mouseMove(e){
@@ -83,3 +84,4 @@ tick();
 window.addEventListener("resize", onresize);
 window.addEventListener("load", onresize);
 //window.addEventListener("load", getMembers);
+*/
