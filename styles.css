@@ -13,7 +13,7 @@
 
 *{
 
-    cursor:none;    
+    cursor:default;    
     font-family: LexandBlack;
     color: black;
 }
@@ -37,9 +37,11 @@ body{
     pointer-events: none;
     transform: var(--circle-transform);
 }
-@keyframes rectAnime {
-    from{border-radius: 0%;}
+@keyframes rectAnimeCrc {
     to{border-radius: 100%;}
+}
+@keyframes rectAnimeSqr {
+    to{border-radius: 0%;}
 }
 /*This animation will be called in javascript*/
 
