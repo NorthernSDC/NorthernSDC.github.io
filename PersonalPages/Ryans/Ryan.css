@@ -3,10 +3,7 @@
     src: url(/Fonts//Lexend/static/Lexend-Black.ttf);
 }
 :root{
- /*We love our variables!*/
- --circle-size: 40px;
- --circle-transform: 0 0 0;
- --cord: 0px;
+
  --navElementWidth: 0px;
  --screnWidth: 1920px;
  --nav-height: 80px;
@@ -57,8 +54,6 @@ body{
     position:fixed;
     height:var(--nav-height);
     width: var(--screnWidth);
-    background: white;
-
     -webkit-transition: 0.5s ease;
 
 
@@ -71,12 +66,12 @@ body{
     justify-content: flex-end;
     list-style: none;
     font-family: LexandBlack;
+    
     margin: 0 auto;
     padding: 0 2rem;
     -webkit-transition: 0.5s ease;
     height: var(--nav-height);
     font-size: 1.2rem;
-    /*background-image: url("/images/waves.png"); */
     background-size: 100% 100%;
     
     
@@ -97,68 +92,17 @@ body{
     align-items: center;
 }
 
-.profile a{
-    text-decoration: none;
-}
-.profile a :hover{
-    cursor:pointer;
-    -webkit-transition: 0.2s ease;
-    color: rgb(23, 51, 80);
-    font-size: 1.6rem;
-}
-.MainPage{
-    font-size: 1.5rem;
-    display: grid;
-    grid-template-columns: 1.5fr .8fr;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    height: 90vh;
-    z-index: 1;
-    width: 100%;
-    max-width: 1500px;
-    padding: 0 50px;
 
-}
-.Members{
-    font-size: 1.5rem;
-}
-.heads{
-    font-size: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    
-}
-.heads div {
-    align-items: center;
-    justify-self: center;
-}
-.MainMembers{
-    font-size: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    
-}
-.MainMembers div {
-    align-items: center;
-    justify-self: center;
-}
-#hackingComputerGif{
-    height: 400px;
-    width:  400px;
-    
-}
+
+
+
+
 
 .underbar{
     width: 0;
     height: 5px;
     background: rgba(100,100,100,0);
-    /*Left: -50px;*/
-    top: var(--underbar-top); /*I put a eight instead of just 80 since it would leave two pixels of difference from the tha navbar and that annoys me -Muffin*/
+    top: var(--underbar-top); 
     position: absolute;
     
 }
@@ -166,7 +110,7 @@ li{
     
     -webkit-transition: 0.15s ease;
 &:hover{
-    text-shadow: 0px -2px 0px
+
 rgba(0,0,0,1), 0 0 5px
 rgba(255,255,255,0.8),0 -4px 15px
 rgba(255,255,255,0.5);
