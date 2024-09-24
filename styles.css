@@ -22,9 +22,11 @@
 
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
     background-image: url("/images/mainbackground.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
+    padding: 25px;
 }
 
 .circle {       
@@ -56,7 +58,9 @@ body{
     left: 0;
     position:fixed;
     height:var(--nav-height);
-    width: var(--screnWidth);
+    width: var(--screnWidth) ;
+    overflow-x:hidden;
+    overflow-y: hidden;
     background: white;
 
     -webkit-transition: 0.5s ease;
@@ -77,7 +81,7 @@ body{
     height: var(--nav-height);
     font-size: 1.2rem;
     /*background-image: url("/images/waves.png"); */
-    background-size: 100% 100%;
+    background-size: auto;
     
     
 }
@@ -118,7 +122,7 @@ body{
     width: 100%;
     max-width: 1500px;
     padding: 0 50px;
-    position-try:
+    
 
 }
 
@@ -154,6 +158,44 @@ body{
     height: 400px;
 
 }
+#hackingComputerGif {display: block}
+
+.ScrollBox{
+    height: 0px;
+}
+
+@media all and (max-width: 500px){
+    #hackingComputerGif {display: none}
+    .MainPage{
+        text-align: center;
+        vertical-align: middle;
+        overflow-x:scroll;
+        overflow-y: scroll;
+    }
+    .MainPage h2{
+        font-size:medium;
+    }
+
+    .body{
+        background-image: url(images/mainbackground-portrait.png);
+    }
+
+    .NavBar{
+        display:none;
+        
+    }
+    
+    .ScrollBox{
+        height: 40vh;
+    }
+    .MainButtons{
+        display:flex;
+        flex-direction: row;
+        height: 2vh;
+        width: 2vh;
+    }
+}
+
 
 .underbar{
     width: 0;
