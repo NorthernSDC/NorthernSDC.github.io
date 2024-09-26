@@ -1,14 +1,9 @@
 const htmlCircleElement = document.getElementById('circlee');
-const mainPageGifElement = document.getElementsByName('mainpagegif');
-const smallestScreenSize = {l: 800, h: 1004} ;
-
 const mouse = {x: 0, y: 0};
 const previousMouse = {x: 0, y: 0};
 var previousScroll = 0;
 const circle = {x: 0, y: 0};
 const speed = 0.17;
-
-
 
 
 var atTop = true;
@@ -18,15 +13,6 @@ var circleIsAnimating = false;
 
 let currentScale = 0;
 let currentAngle = 0;
-
-
-
-function DontDoGif(e){
-    if( !(window.innerWidth >= smallestScreenSize.l))
-    {
-        mainPageGifElement.style.visibility = "hidden"
-    }
-}
 
 function onresize() {
     //note i need to pass the event as an argument to the function
@@ -39,7 +25,7 @@ function onresize() {
     var rect = element.getBoundingClientRect();
     //document.getElementById('text').innerHTML = 'X Coordinate= ' + rect.x + '<br>' + 'Y'
     document.documentElement.style.setProperty(`--cord`, rect.x + 'px');
-    document.documentElement.style.setProperty(`--navElementWidth`, window.innerWidth + 1 + 'px');
+    document.documentElement.style.setProperty(`--navElementWidth`, element.clientWidth + 1 + 'px');
     //Coordinate = ' + rect.y';
  }
 
@@ -182,7 +168,7 @@ htmlCircleElement.style.visibility = "hidden";
 tick();
 
 function resizer(e){
-    //console.log(document.documentElement.scrollTop)
+    console.log(document.documentElement.scrollTop)
     if(document.documentElement.scrollTop <= previousScroll){
         document.documentElement.style.setProperty(`--nav-height`, 80 + 'px');
         document.documentElement.style.setProperty(`--underbar-top`, 78 + 'px');
@@ -198,16 +184,10 @@ function resizer(e){
     previousScroll = document.documentElement.scrollTop;
 }
 
-function Switch(e)
-{
-    DontDoGif(e)
-    onresize()
-}
-
 
 window.addEventListener("scroll", resizer)
 window.addEventListener("mousemove", animater)
-window.addEventListener("resize", Switch);
+window.addEventListener("resize", onresize);
 window.addEventListener("load", onresize);
 window.addEventListener("load", getMembers);
 //GrayIndexFinger

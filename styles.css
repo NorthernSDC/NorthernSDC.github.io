@@ -24,7 +24,7 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     background-image: url("/images/mainbackground.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: auto;
     padding: 25px;
 }
@@ -164,13 +164,59 @@ body{
     height: 0px;
 }
 
+.MainButtons{
+    display: none;
+}
+
+.MemberBody{
+    overflow-y: scroll;
+}
+
+
+.WorkingOnIt{
+    outline-style:none;
+    outline-width: 1px;
+    outline-color: black;
+    outline-offset: 10px;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.MobileMembers{
+    display:none;
+}
+.BackToHomePage{
+    display:none;
+}
+
+.MobileBetaTip{
+    display:none;
+}
+
 @media all and (max-width: 500px){
     #hackingComputerGif {display: none}
+    .MobileBetaTip{
+        display: block;
+    }
     .MainPage{
         text-align: center;
         vertical-align: middle;
-        overflow-x:scroll;
-        overflow-y: scroll;
+    }
+    .IndexPage{
+        overflow-x:hidden;
+        overflow-y: hidden;
+    }
+    
+    .Members{
+        display:none;
+    }
+    .MobileMembers{
+        display:block;
+
+    }
+    .MobileScrollSpace{
+        height:10px;
     }
     .MainPage h2{
         font-size:medium;
@@ -191,8 +237,19 @@ body{
     .MainButtons{
         display:flex;
         flex-direction: row;
-        height: 2vh;
+        height: 10vh;
         width: 2vh;
+        
+    }
+
+    .MobileProfileSpace{
+        outline-style: solid;
+    }
+    .MobileProfile div{
+        height:0.1px;
+    }
+    .BackToHomePage{
+        display:block;  
     }
 }
 
